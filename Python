@@ -1,0 +1,43 @@
+print("Bienvenue dans le jeu de Nim.")
+print("Vous commencez.")
+allumettesdispo = int(input("Séletionner un nombre entre 25 et 50. "))
+print("Vous jouez avec ",allumettesdispo, "allumettes.")
+
+while(allumettesdispo > 1):
+    print("")
+    allumettesjoueur = int(input("A votre tour, combien d'allumettes souhaitez-vous enlever ? Entre 1 et 3. "))
+    allumettesdispo = allumettesdispo - allumettesjoueur
+
+    print("")
+    print("Il reste ", allumettesdispo, "allumettes disponibles.")
+
+    print("")
+
+    if allumettesdispo == 1:
+        print("Félicitation ! Vous avez gagné !");
+        break;
+    print("")
+    print("Au tour de l'ordinateur.")
+
+    if allumettesdispo <= 4:
+        allumettesordinateur = allumettesdispo -1;
+
+    else:
+        from random import*
+        allumettesordinateur = randint(1,3);
+
+    print("")
+    print("L'ordinateur a choisi de retirer ",allumettesordinateur, "allumettes.")
+
+    allumettesdispo = allumettesdispo - allumettesordinateur
+
+    print("")
+    print("Il reste ", allumettesdispo, "allumettes disponibles.")
+
+    print("")
+    
+    if allumettesdispo == 1:
+        print("")
+        print("Dommage ! L'ordinateur a gagné !");
+        break;
+    
