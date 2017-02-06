@@ -1,0 +1,40 @@
+Variables
+
+allumettesdispo = entier court
+allumettesjoueur = entier court
+
+Début
+
+allumettesdispo = 30
+Tant que allumettesdispo > 1
+allumettesjoueur = Ecrire « A votre tour, combien d'allumettes souhaitez-vous enlever ? Entre 1 et 3. »
+	Lire allumettesjoueur
+	allumettesdispo = allumettesdispo – allumettesjoueur
+	Ecrire « Il reste », allumettesdispo, « allumettes disponibles. »
+	
+	Si allumettesdispo == 1
+		Ecrire « Félicitation ! Vous avez gagné ! »
+	Fin Si
+	
+	Ecrire « Au tour de l’ordinateur. »
+
+	Si allumettesdispoc < 3
+		Allumettesordinateur = allumettesdispo -1 
+
+	Sinon
+		allumettesordinateur = Nombre choisi aléatoirement par l’ordinateur
+		Lire allumettesordinateur
+		Ecrire « L'ordinateur a choisi de retirer »,allumettesordinateur, « allumettes. »
+	Fin Si	
+
+	allumettesdispo = allumettesdispo – allumettesordinateur
+
+	Ecrire « Il reste », allumettesdispo, « allumettes disponibles. »
+
+	Si allumettesdispo == 1
+		Ecrire « Félicitation ! Vous avez gagné ! »
+	Fin Si
+
+Fin Tant que
+
+Fin
